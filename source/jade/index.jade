@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+	body
+		head
+			<title>Mobile First Design</title>
+			<meta charset="utf-8">
+			<meta name="description" content="Your site must be mobile friendly or you risk losing half of your visitors. Here's why">
+			<meta name="robots" content="all" />
+			<meta name="author" content="Mike Bryan">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			style
+			link(rel='stylesheet', href='css/style.css')
+		input#main-nav-check(type='checkbox')
+		.wrapper
+			header
+				label.toggle(for='main-nav-check', onclick='', title='Menu') &#x2261;
+
+				h1.logo
+					span M
+					| obile 
+					span F
+					| irst desig
+					span N
+				hr.fade
+				#menu
+					label.toggle(for='main-nav-check', onclick='', title='Close') &times;
+					ul#eqspace
+						li
+							a.active.slide(href='/') why mobile
+						li
+							a.slide(href='/how/') how we do it
+						li
+							a.slide(href='/contact/') contact us
+						li
+							a.slide(href='/about/') about us
+						li
+							a.slide(href='/services/') our services
+
+
+			.container
+				p
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet convallis erat non viverra. Duis tristique id eros vitae suscipit. In gravida placerat sollicitudin. Sed augue neque, tincidunt a auctor vel, semper at ex. Morbi ornare nisl in tortor laoreet aliquam. In varius nulla ac euismod gravida. Aenean quis mi non turpis molestie eleifend sit amet viverra massa. Nulla volutpat consectetur tellus eu viverra. Quisque ullamcorper nisi justo, quis malesuada odio posuere eget. In ornare turpis et nisl scelerisque, ac mollis felis consectetur. Quisque vel feugiat nunc. Vestibulum bibendum viverra eros. Sed at dui elementum, posuere nunc ut, gravida ex. Nullam nec lorem blandit, cursus dolor et, lobortis justo. Curabitur nec metus tortor.
+				p
+					| Curabitur blandit urna ligula, id dapibus ante porttitor ut. Sed convallis turpis a dui ultricies porta. Integer sed libero sit amet nisi eleifend sollicitudin. Integer vitae libero et tellus gravida consequat. Praesent dignissim libero mi, maximus malesuada eros consectetur ut. Cras ipsum felis, lacinia at sapien quis, pellentesque tempor massa. Sed at dignissim ipsum, a pretium dolor.
