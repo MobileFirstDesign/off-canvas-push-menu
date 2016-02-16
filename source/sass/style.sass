@@ -1,0 +1,179 @@
+$grey-500: #9E9E9E
+$grey-900: #212121
+$grey-200: #EEEEEE
+$grey-700: #616161
+$red-A700: #D50000
+$white: #FFFFFF
+$black: #000000
+$logocap-color: $red-A700
+$logocase-color: $grey-500
+$toggle-xcolor: $white
+$mobile-menu-color: $white
+$mobile-banner-color: $grey-200
+$mobile-bkg-color: $grey-900
+$mobile-bkg-color-hover: $grey-700
+$hamburger-color: $red-A700
+$link-slider-color: $grey-500
+*
+	margin: 0
+	padding: 0
+
+body
+	font-family: helvetica, arial, sans-serif
+	max-width: 1200px
+	margin-left: auto
+	margin-right: auto
+h1
+	font-size: 1.3em
+	text-align: center
+	line-height: 2.3em
+
+p
+	margin-bottom: 1em
+
+.wrapper
+	background-color: $white
+
+header
+	background-color: $mobile-banner-color
+	color: $hamburger-color
+	height: 3em
+header:hover
+	color: $grey-500
+
+#menu
+	padding-bottom: 1em
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 13.75em
+	background: $mobile-bkg-color
+	z-index: 9999
+	left: -13.75em
+	ul
+		margin-top: 3em
+		&:after
+			content: ""
+			display: table
+			clear: both
+	li
+		list-style: none
+		padding: .6em 1em
+		border-bottom: 1px solid #ccc
+		background-color: $mobile-bkg-color
+		a
+			color: $mobile-menu-color
+	
+#main-nav-check
+	position: absolute
+	top: -9999px
+	left: -9999px
+
+.toggle
+	cursor: pointer
+	font-size: 1.3em
+	float: left
+	line-height: 2.2em
+	padding: 0 0 0 .5em
+
+#menu .toggle
+	color: $toggle-xcolor
+#menu label:hover
+	color: $hamburger-color
+#menu li a
+	text-decoration: none
+#menu li:hover
+	background: $grey-700
+.container
+	padding: 1em
+	
+.wrapper
+	-webkit-transform: translate(0, 0)
+	-ms-transform: translate(0, 0)
+	transform: translate(0, 0)
+	-webkit-transition: -webkit-transform .25s ease
+	transition: transform .25s ease
+
+/* #### - define ids of animated container, menu and sub-menus here - ####
+
+#main-nav-check:checked ~ .wrapper
+	-webkit-transform: translate(13.75em, 0)
+	-ms-transform: translate(13.75em, 0)
+	transform: translate(13.75em, 0)
+
+h1.logo 
+	color: $logocase-color;
+	font-family: "Bauhaus 93","Baumans",cursive;
+	font-size: 2.5 em;
+	margin: 0;
+	text-align: center;
+
+h1.logo span 
+   color: $logocap-color;
+
+hr.fade
+  border: 0 none
+  box-shadow: 0 12px 12px -12px rgba(0, 0, 0, 0.5) inset
+  height: 12px
+  margin-top: 0px
+
+@media all and (min-width: 800px)
+
+	.wrapper
+		width: 96%
+		margin: 0 auto
+		
+	header
+		height: inherit
+		padding: 1em
+		background: #fff
+
+	h1.logo
+		text-align: center
+		font-size: 5vw
+		line-height: 1
+		font-weight: normal
+	#menu
+		position: inherit
+		width: 100%
+		background: $white
+
+		ul
+			margin-top: 1em
+
+		li
+			float: left
+			margin-right: .5em
+			background: #fff
+			border-bottom: $white
+			font-size: 1.25em
+	#eqspace
+		display: flex
+		justify-content: space-around
+	#menu li:hover
+		background: $white
+	#menu li a
+		color:grey
+		text-decoration: none
+	#menu li a.active
+		text-decoration: overline
+	#menu li a.slide
+		display: inline-block
+		position: relative
+		padding-bottom: 3px
+	#menu li a.slide:after
+		content: '';
+		display: block;
+		margin: auto;
+		height: 3px;
+		width: 0px;
+		background: transparent;
+		transition: width .5s ease, background-color .5s ease;
+	#menu li a.slide:hover:after
+		width: 100%;
+		background: $link-slider-color	
+
+	.toggle
+		display: none
+	hr.fade
+		display: none
